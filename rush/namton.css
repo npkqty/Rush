@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+section {
+    height: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 60px;
+}
+
+h2 {
+    font-size: 100px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+h2:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    color: #ff0000; /* Change color on hover */
+}
+
+p {
+    font-size: 40px;
+    margin: 20px 0; /* Adjust margin for better spacing */
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+    padding: 0 20px; /* Simplified padding */
+    font-size: 50px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    padding: 1rem 20px; /* Added padding for better spacing */
+    background-color: #ffffff;
+    color: black;    
+    outline: 2px solid #000000;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+#about {
+    background-color: #ffffff;
+    color: black;
+}
+
+#skills, #contact {
+    background-color: #000000;
+}
+
+#projects {
+    background-color: #ffffff;
+    color: black;
+}
+
+.social-media {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Center social media icons */
+}
+
+.social-media img {
+    width: 75px;
+    height: 75px;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+#profile {
+    width: 400px;
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#pictures {
+    width: 40%;
+    max-width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links */
+        width: 100%; /* Full width */
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; /* Below navbar */
+        left: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Show links when checkbox is checked */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    section {
+        padding: 40px 10px; /* Reduce padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 60px; /* Adjust heading size */
+    }
+
+    h3 {
+        font-size: 40px; /* Adjust project heading size */
+    }
+
+    p {
+        font-size: 30px; /* Adjust paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 40px; /* Further adjust heading size */
+    }
+
+    h3 {
+        font-size: 30px; /* Further adjust project heading size */
+    }
+
+    .social-media img {
+        width: 50px; /* Smaller icons for small screens */
+        height: 50px;
+    }
+}

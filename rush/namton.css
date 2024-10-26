@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+section {
+    height: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h2 {
+    font-size: 100px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+h2:hover {
+    transform: scale(1.2); 
+    color: #ff0000;
+}
+
+p {
+    font-size: 40px;
+    margin: 20px 0; 
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+    padding: 0 20px; 
+    font-size: 50px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 20px;
+    background-color: #ffffff;
+    color: black;    
+    outline: 2px solid #000000;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-links a:hover {
+    color: #ff0000;
+}
+
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; 
+}
+
+#about {
+    background-color: #ffffff;
+    color: black;
+}
+
+#skills, #contact {
+    background-color: #000000;
+}
+
+#projects {
+    background-color: #ffffff;
+    color: black;
+}
+
+.social-media {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media img {
+    width: 75px;
+    height: 75px;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+#profile {
+    width: 20%;
+    max-width: 100%; 
+    height: auto;
+}
+
+#pictures {
+    width: 40%;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%; 
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; 
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    section {
+        padding: 40px 10px; 
+    }
+
+    h2 {
+        font-size: 60px; 
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 40px; 
+    }
+
+    h3 {
+        font-size: 30px; 
+    }
+
+    .social-media img {
+        width: 50px; 
+        height: 50px;
+    }
+}
